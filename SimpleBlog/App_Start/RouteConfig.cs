@@ -25,6 +25,8 @@ namespace SimpleBlog
        
             routes.MapRoute("Login", "login", new { controller = "Auth", Action = "Login" }, namespaces);
 
+            routes.MapRoute("Logout", "logout", new { controller = "Auth", Action = "Logout" }, namespaces);
+
             routes.MapRoute("Home", "", new { controller = "Posts", action = "Index" }, namespaces);
 
         }
