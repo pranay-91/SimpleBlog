@@ -16,13 +16,13 @@ namespace SimpleBlog
 
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            //routes.MapRoute(
-            //    name: "Default",
-            //    url: "{controller}/{action}/{id}",
-            //    defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-            //);
+       /*     routes.MapRoute(
+                name: "Default",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+            );
 
-       
+       */
             routes.MapRoute("Login", "login", new { controller = "Auth", Action = "Login" }, namespaces);
 
             routes.MapRoute("Logout", "logout", new { controller = "Auth", Action = "Logout" }, namespaces);

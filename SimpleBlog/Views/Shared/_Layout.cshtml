@@ -1,4 +1,6 @@
-﻿@{
+﻿@using System.IdentityModel.Tokens
+@using System.Web.Optimization
+@{
     Layout = null;
 }
 
@@ -9,12 +11,13 @@
     <meta name="viewport" content="width=device-width"/>
     <title>@ViewBag.Title - SimpleBlog </title>
 
-
+    @Styles.Render("~/styles")
 </head>
 <body>
 <header>
     <h1>
         <a href="@Url.RouteUrl("Home")"> Simple Blog </a>
+        <i class="glyphicon glyphicon-bell"></i>
     </h1>
 
     @if (User.Identity.IsAuthenticated)
@@ -35,6 +38,7 @@
 </header>
 @RenderBody()
 
+    @Scripts.Render("~/scripts")
 @RenderSection("Scripts", false)
 
 </body>
